@@ -18,7 +18,6 @@ module.exports = {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
             },
-
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -26,7 +25,7 @@ module.exports = {
             },
         ],
     },
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [new HtmlWebpackPlugin({ template: 'src/index.html' })],
     devServer: {
         port: 3000,
         open: true,
